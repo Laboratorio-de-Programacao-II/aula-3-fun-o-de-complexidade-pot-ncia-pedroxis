@@ -21,7 +21,7 @@ long long pot_eficiente(long long base, int exp) {
     
     return resultado; 
 
-    //considerando apenas o bloco de repetiçao o algoritmo possui uma grandeza Log(N/2)
+    //considerando apenas o bloco de repetiçao o algoritmo possui uma grandeza Log(N)
 }
 
 
