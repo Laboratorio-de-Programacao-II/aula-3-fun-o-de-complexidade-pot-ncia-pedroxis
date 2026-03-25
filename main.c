@@ -8,9 +8,23 @@ long long pot(long long base, int exp) {
 }
 
 long long pot_eficiente(long long base, int exp) {
-    /* IMPLEMENTAR ESTA FUNÇÃO COM ALGORITMO MAISEFICIENTE QUE POT() */
-    return 0; // Substitua este retorno pelo resultado correto
+    long long resultado = 1;
+    for(int i=0; i < exp/2; i++) {    // executa a potencia (N/2) vezes 
+        resultado *=  base;            // primeira iteração o resultado vira o proprio numero, após isso é multiplicado por ele mesmo
+    } 
+    if(exp % 2 == 0){     //expoente par
+        resultado *= resultado;                // sabemos quanto é a metade da exponenciação então a multiplicamos por 2
+    } else if (exp % 2 == 1) {   // expoente impar
+        resultado *= resultado;
+        resultado *= base;             // se expoente é ímpar, faz uma ultima multiplicação. 
+    }
+    
+    return resultado; 
+
+    //considerando apenas o bloco de repetiçao o algoritmo possui uma grandeza Log(N/2)
 }
+
+
 
 int main() {
     long long base;
